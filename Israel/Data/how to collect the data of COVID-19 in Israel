@@ -1,0 +1,39 @@
+how to collect the data of COVID-19 in Germany 
+
+step 1: observe the confirmed case numbers of COVID-19 in our world in data website (https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2021-02-16..2021-07-09&facet=none&pickerSort=asc&pickerMetric=location&Metric=Confirmed+cases&Interval=7-day+rolling+average&Relative+to+Population=false&Color+by+test+positivity=false&country=~DEU)
+
+Action: download full data (CSV)
+
+get "people_fully_vaccinated_per_hundred"
+
+Step 2: get "total_boosters_per_hundred"
+
+Step 3: get "daily_vaccinated_per_hundred_booster" by calculation. daily_vaccinated_per_hundred_booster = people_fully_vaccinated_per_hundred + total_boosters_per_hundred - people_fully_vaccinated_per_hundred_previous_day - total_boosters_per_hundred_previous_day
+
+Step 4: get "Stringency_index"
+
+Step 5: get "Total_cases"
+
+Step 6: get "daily_cases" by calculation. daily_cases = total_cases - total_cases_previous_day
+
+Step 7: get "Daily_cases_average" by calculation. daily_cases_average = 7 consecutive days' total daily cases divided by 7 
+
+Step 8: get "total_deaths"
+
+Step 9: get "Daily_deaths" by calculation. daily_deaths = total_deaths - total_deaths_previous_day
+
+Step 10: get "Daily_deaths_average" by calculation. Daily_deaths_average = 7 consecutive days' total daily cases divided by 7 
+
+Step 11: get "Total_population" in the csv "owid-covid-data"
+
+Step 12: get "infected" by calculations. infected = last 14 days' daily cases total
+
+Step 13: get "Infected_average" by calculations. The process is similar to daily_cases_average
+
+Step 14: get "Total_recovered" by calculations. Total_recovered = Total_cases - total_deaths - infected 
+
+Step 15: get "Daily_recovered" by calculation. daily_recovered = total_recovered - total_recovered_previous_day
+
+Step 16: get "Daily_recovered_average" by calculation. The process is similar to daily_cases_average
+
+Step 17: look for NPIs related to vaccinated and unvaccinated news
